@@ -218,16 +218,24 @@ Include your notes from above: what were your initial ideas, what did the LLM su
 ### 1340 Supplement
 
 - #### 1. Correctness
+A CSV parser must take in data that is roughly formatted correctly and if given a schema, should format said data into either an array of array of strings or a list of the schema. It should not crash but warn when information is not correctly formatted. It should try to understand certain data whether it is numbers written in plain English or extra spaces or quotations. The CSV should also be able to accept almost any schema and be able to map them. It should also be able to take empty slots, instead leaving them blank. It should always output data structures with all the fields, empty or not.
 
 - #### 2. Random, On-Demand Generation
+First, a concern arises on the basis of randomly produced. Does this mean that field count and format is consistent? Assuming it is not ridiculous, this source could check what goes through the parser and what should not. For example, too many fields in a single row should result in an error. A name instead of an age or misformatted quotations could provide more comprehensiveness to the parser. Also a producer of CSV data gives us an opportunity to stress-test the system to check efficiency by making a huge amount of data to filter through.
 
 - #### 3. Overall experience, Bugs encountered and resolved
 #### Errors/Bugs:
 #### Tests:
 #### How To…
+    This sprint was definitely different due to how it made you find the answers yourself and was not much in the way of stencil code or babying you. You had to figure out how to start with zod and change parameters and outputs. I encountered too many bugs but that is a part of coding. For one, when inputing the zodType, an error arose over "Argument of type 'string[]' is not assignable to parameter of type 'string'." The fix was to establish the type of the result being returned and also separating it for if there was a schema or not. Another error was in my testing after adding the schema, it would not be able to handle when testing for locations in the arrays if the schema would not be arrays of arrays. Here, I had to also establish that the results would string[][]. I managed to avoid a lot of them by reading a lot more than usual before starting with the types doc and the Zod website.
+
+
 
 #### Team members and contributions (include cs logins):
 
 #### Collaborators (cslogins of anyone you worked with on this project and/or generative AI): 
-#### Total estimated time it took to complete project:
+    ChatGPT for the LLM to expand perspective.
+#### Total estimated time it took to complete project: 
+    3 hours
 #### Link to GitHub Repo:  
+    https://github.com/cs0320-f25/typescript-csv-OtterSA.git
