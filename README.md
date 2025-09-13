@@ -12,6 +12,7 @@
     Perhaps some way to focus on the csv file's fields rather than each row being individual people. Perhaps a categorization by fields alone.
 
 - #### Step 2: Use an LLM to help expand your perspective.
+Chat History with ChatGPT
 
 From Given Prompt:
     Delimiter flexibility: Not all CSVs use commas — some use semicolons (;), tabs (\t), or pipes (|). Support configurable delimiters.
@@ -227,6 +228,6 @@ Include your notes from above: what were your initial ideas, what did the LLM su
 
 #### Team members and contributions (include cs logins):
 
-#### Collaborators (cslogins of anyone you worked with on this project and/or generative AI):
+#### Collaborators (cslogins of anyone you worked with on this project and/or generative AI): 
 #### Total estimated time it took to complete project:
 #### Link to GitHub Repo:  
